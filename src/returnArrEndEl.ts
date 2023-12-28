@@ -15,7 +15,8 @@
 // 0 <= arr.length <= 1000
 
 
-Array.prototype.last = function() {
+// @ts-ignore
+Array.prototype.last = function():unknown {
     // return this.length === 0 ? -1 : this[this.length-1] 9% 74%
     if(this.length){ // 效率高
         return this[this.length-1]

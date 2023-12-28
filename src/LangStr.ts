@@ -19,9 +19,9 @@
  * @return {number}
  */
 
-    function lengthOfLongestSubstring(s) {
-        let res = {}
-        let _s = s.split("")
+    function lengthOfLongestSubstring(s:string) {
+        let res:{[key:string]:number} = {}
+        let _s:string[] = s.split("")
         for (let i = 0;i < _s.length;i++){
             let key = _s[i]
             if(res[key] == undefined){

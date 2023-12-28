@@ -11,17 +11,17 @@ nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0 。
 不同的三元组是 [-1,0,1] 和 [-1,-1,2] 。
 注意，输出的顺序和三元组的顺序并不重要。
 * */
-var threeSum = function(nums) {
-    var res = [];
-    const len = nums.length
+var threeSum = function(nums:number[]):number[] {
+    var res:number[] = [];
+    const len:number = nums.length
     if(len <= 3 ) return nums;
-    nums.sort((a,b)=>a-b)
+    nums.sort((a:number,b:number):number => a-b)
     // 确保 左右侧为负数 和 正数
     if(nums[0]<=0 && nums[len-1]>=0){
-        var i = 0;
+        var i:number = 0;
         while (i < len -2 ){
-            var fast = i+1;
-            var end  = len-1;
+            var fast:number = i+1;
+            var end:number  = len-1;
         }
     }
     return res

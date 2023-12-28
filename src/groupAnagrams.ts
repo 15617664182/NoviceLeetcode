@@ -4,14 +4,14 @@
 * 输入: strs = ["eat", "tea", "tan", "ate", "nat", "bat"]
 * 输出: [["bat"],["nat","tan"],["ate","eat","tea"]]
 * */
-const  groupAnagrams = function(strs) {
-    let map  = new Map();
+const  groupAnagrams = function(strs:string[]) {
+    let map:Map<string,string[]>  = new Map();
     let res = []
-    strs.forEach(item=>{
+    strs.forEach((item)=>{
         if(!map.has(item.split('').sort().join(""))){
             map.set(item.split('').sort().join(''),[item])
         }else{
-            map.set(item.split('').sort().join(''),[...map.get(item.split('').sort().join('')),item])
+            map.set(item.split('').sort().join(''),[...map.get(item.split('').sort().join('')) as string[] ,item])
         }
     })
     for ( var [key,val] of map){

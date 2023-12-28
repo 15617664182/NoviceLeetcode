@@ -15,10 +15,10 @@
  * @return {number[]}
  */
 let arr = [2,6,8,5,4,3,1]
- function twoSum(nums, target) {
-    const preNum = {} // {2:0,6:1,8:2}
+ function twoSum(nums:number[], target:number):unknown {
+    const preNum: any = {} // {2:0,6:1,8:2}
     for (let i = 0;i<nums.length;i++){
-        let targetNum = target - nums[i]  // 需要 找到的数字 9
+        let targetNum:number = target - nums[i]  // 需要 找到的数字 9
         let targetIdx = preNum[targetNum] // 判断preNum中有没有目标元素，undefined
         if(targetIdx == undefined){
             // 如果说 目标下标 不存在 则将 value：idx 存入
