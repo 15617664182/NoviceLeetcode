@@ -45,9 +45,9 @@ son1.like.push("踢足球")
 // console.log("son1====",son1.like)
 // console.log("son2====",son2.like)
 
- // 第三 组合继承    ***重点***
-//  使用 原型链继承，构造函数继承，解决原型链继承时无法向父类构造函数传参的问题
-// 本质： 使用构造函数继承实例属性  使用原型链继承原型上的方法和属性
+//  第三 组合继承    ***重点***
+//  使用原型链继承，构造函数继承，解决原型链继承时无法向父类构造函数传参的问题
+//  本质： 使用构造函数继承实例属性  使用原型链继承原型上的方法和属性
 //  缺点： 调用了两次 构造函数  第一次为 创建子类的实例属性  第二次为创建原型链
 function A(name,like){
     this.name = name
@@ -74,7 +74,7 @@ function obj(target){
 }
 var person={
     name:"小李",
-    friends:["小米","小兰"],
+    friends:["小a","小b"],
     sayname:function(){
         console.log(this.name)
     }
