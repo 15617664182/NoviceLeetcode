@@ -14,8 +14,12 @@
  * @param {number} target
  * @return {number[]}
  */
-let arr = [2,6,8,5,4,3,1]
- function twoSum(nums:number[], target:number):unknown {
+let arrs: number[] = [2, 6, 8, 5, 4, 3, 1];
+
+function twoSum(nums:number[], target:number):unknown {
+    // 使用对象
+    // 时间复杂度 O(n)
+    // 空间复杂度O(1)
     const preNum: any = {} // {2:0,6:1,8:2}
     for (let i = 0;i<nums.length;i++){
         let targetNum:number = target - nums[i]  // 需要 找到的数字 9
@@ -28,6 +32,33 @@ let arr = [2,6,8,5,4,3,1]
             return [preNum[targetNum],i]
         }
     }
-};
+}
 
-console.log(twoSum(arr,14))
+// 使用双指针思想
+
+var  arr2:number[] = [2,4,5,6,8,9,12,14]
+// 给定数据必须为生序
+function twoSums(nums:number[], target:number):unknown {
+    /**
+     * 如果两个指针指向元素的和 sum == target，那么得到要求的结果；
+     * 如果 sum > target，移动较大的元素，使 sum 变小一些；
+     * 如果 sum < target，移动较小的元素，使 sum 变大一些。
+     * */
+    var left = 0;
+    var right = nums.length-1;
+    var result:number[]=[];
+    while (left < right){
+        if(nums[left]+nums[right] == target){
+            result = [left,right]
+            break;
+            // 结果 > 目标
+        }else if(nums[left]+nums[right]>target){
+            --right
+        }else{// 结果<目标
+            ++left
+        }
+    }
+    return result
+}
+// console.log(twoSum(arrs,14))
+console.log(twoSums(arr2,15))
