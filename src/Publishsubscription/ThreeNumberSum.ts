@@ -15,11 +15,11 @@ var threeSum = function(nums:number[]):number[] {
     var res:number[] = [];
     const len:number = nums.length
     if(len <= 3 ) return nums;
-    nums.sort((a:number,b:number):number => a-b)
-    // 确保 左右侧为负数 和 正数
+    nums.sort((a:number,b:number) => a-b)
+
     if(nums[0]<=0 && nums[len-1]>=0){
         var i:number = 0;
-        while (i < len -2 ){
+        while (i < len -2 ){// 确保 左右侧为负数 和 正数
             var fast:number = i+1;
             var end:number  = len-1;
         }

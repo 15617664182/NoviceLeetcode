@@ -8,7 +8,6 @@ function binarySearch(arr: number[], target: number, left:  number, right: numbe
     right = right ? right : arr.length - 1;
     // 数组为空 返回-1
     if(arr.length === 0) return -1;
-
     // 定义中间位置
     var minIndex:number = Math.floor((left + right) / 2);
     var minVal = arr[minIndex];
