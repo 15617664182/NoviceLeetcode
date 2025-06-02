@@ -1,4 +1,11 @@
-// 观察者模式
+/*
+ * @Description: 观察者模式
+ * @Author: smile
+ * @Date: 2025-05-28 21:01:00
+ * @LastEditors: smile
+ * @LastEditTime: 2025-05-29 16:36:32
+ */
+
 interface IObserver{
       update(o:any):void;
 }
