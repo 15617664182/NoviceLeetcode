@@ -41,21 +41,42 @@ var map = new Map();
 // map.values()
 
 // 删除
-map.delete('key')
+// map.delete('key')
+//
+// // 返回map的成员数量
+// // map.size()
+// var set = new Set();
+// // 添加
+// set.add()
+// // 删除
+// set.delete()
+// set.has()
+// set.keys()
+// set.values()
+// set.size()
+// set.clear()
+//
+//
+// var weakMap = new WeakMap();
+// var weakSet = new WeakSet();
 
-// 返回map的成员数量
-// map.size()
-var set = new Set();
-// 添加
-set.add()
-// 删除
-set.delete()
-set.has()
-set.keys()
-set.values()
-set.size()
-set.clear()
+var targetObj={
+    name:'zhangsan',
+    age:18,
+    say:function(){
+        console.log('say hi')
+    }
+}
+ var proxy = new Proxy(targetObj,{
+     get(target,key,receiver){
+         console.log('get',target,key,receiver)
+         return target[key]
+     },
+     set(target,key,value){
+         console.log('set')
+         target[key] = value
+     }
+ })
 
-
-var weakMap = new WeakMap();
-var weakSet = new WeakSet();
+// console.log(proxy.name)
+ //
