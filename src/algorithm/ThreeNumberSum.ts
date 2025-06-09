@@ -14,7 +14,6 @@ nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0 。
 var threeSum = function(nums:number[]):number[][]|number[]|[] {
     if(nums.length<3){return [0]}
     var arr:number[] = nums.sort((a,b)=>a-b)
-    console.log(arr)
     var res:number[][] =[]
     for (var i =0;i<nums.length;i++){
         var l = i + 1;
