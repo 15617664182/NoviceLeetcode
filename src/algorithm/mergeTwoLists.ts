@@ -16,23 +16,25 @@
  * @param {ListNode} list2
  * @return {ListNode}
  */
-function mergeTwoLists(list1, list2){
+function mergeTwoLists(list1:ListNode, list2:ListNode){
     var head = new ListNode();
     var cur = head;
     while (list1&&list2){ // 必定有一个为null
        if(list1.val <= list2.val){
            // 1. l1 <= l2 时 将指针指向l1
-           cur.next = list1.val
+           cur.next = list1
            // 2. 同时将cur的指针往右移动
            cur = cur.next
            // 3. 将list1的指针往右移动一位
+           // @ts-ignore
            list1 = list1.next
        }else if(list1.val > list2.val){
            // 1. 当l2小于l1时 将cur的指针指向 l2
-           cur.next = list2.val
+           cur.next = list2
            // 2. 将cur的指针往右移动
            cur = cur.next
            // 3. 将l2的指针往右移动
+           // @ts-ignore
            list2 = list2.next
        }
     }
