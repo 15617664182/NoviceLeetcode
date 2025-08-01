@@ -111,9 +111,12 @@ promiseA+规范：[PromiseA+规范网址](https://promisesaplus.com)
 
 #### async和await *
 1. async和await是什么？
-async和await是es6新特性，是两个关键字，async用于定义异步函数，await用于等待异步函数执行完成。
+        
+       async和await是es6新特性，是两个关键字，async用于定义异步函数，await用于等待异步函数执行完成。
+       让异步代码进行同步执行
 2. async和await如何实现的?
-async和await本质是语法糖，async和await都是基于Promise对象和事件换行(event loop)实现的。
+
+       async和await本质是语法糖，async和await都是基于Promise对象和事件换行(event loop)实现的。
 3. 补充
    1. async和await的优点<br/>
      显著提升代码可读性

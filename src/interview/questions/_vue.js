@@ -23,13 +23,25 @@
  * Vuex
  * 1. store
  *    - 存放状态的仓库
+ *    this.$store.state.stateName
+ *    // 分模块
+ *    this.$store.state.modulesName.stateName
  * 2. mutations
  *    - 用于修改状态的函数，不能进行异步操作
+ *    this.$store.commit('mutationsName',payload)
+ *    // 分模块
+ *    this.$store.commit('modulesName/mutationsName',payload)
+ *
  * 3. actions
  *    - 用于触发mutations的函数，可以进行异步操作
+ *    this.$store.dispatch('actionsName',payload)
+ *    // 分模块
+ *    this.$store.dispatch('modulesName/actionsName',payload)
  * 4. getters
  *    - 从store中派生出来的数据
+ *    this.$store.getters.getterName
  * 5. modules
+ *
  *    - 用于拆分store的模块，在较大的应用中 将各个模块的状态抽离出到相对应的模块中，方便管理
  *
  *   页面刷新会丢失，所以需要使用持久化存储，可以使用localStorage、sessionStorage、cookie、IndexedDB等
